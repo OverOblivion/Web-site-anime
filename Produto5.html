@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra do Produto</title>
+  <link rel="stylesheet" href="CSS/Produtos.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Seção do produto -->
+    <div class="product-section">
+      <img src="IMG/mashle.jpg" alt="Produto 5">
+      <div class="product-title">Mashle</div>
+      <div class="product-description">Mashle segue Mash Burnedead, um jovem sem poderes mágicos, que usa sua incrível força física...</div>
+      <div class="product-price">R$ 24,90</div>
+    </div>
+
+    <!-- Seção do formulário de pagamento -->
+    <div class="form-section">
+      <h2>Pagamento</h2>
+      <form id="paymentForm">
+        <div class="form-group">
+          <label for="cardBrand">Bandeira do Cartão</label>
+          <select id="cardBrand" required>
+            <option value="">Selecione</option>
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="American Express">American Express</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cardNumber">Número do Cartão</label>
+          <input type="text" id="cardNumber" required placeholder="Digite o número do cartão">
+        </div>
+
+        <div class="form-group">
+          <label for="expirationDate">Data de Expiração</label>
+          <input type="month" id="expirationDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="securityCode">Código de Segurança</label>
+          <input type="text" id="securityCode" required placeholder="CVV">
+        </div>
+
+        <div class="form-group payment-option">
+          <input type="radio" name="paymentMethod" id="cardPayment" value="Card" checked>
+          <label for="cardPayment">Pagar com Cartão</label>
+        </div>
+
+        <div class="form-group payment-option">
+          <input type="radio" name="paymentMethod" id="pixPayment" value="Pix">
+          <label for="pixPayment">Pagar com Pix</label>
+        </div>
+
+        <div class="form-group">
+          <button type="submit">Finalizar Compra</button>
+        </div>
+      </form>
+
+      <div class="success-message" id="successMessage">
+        Compra realizada com sucesso! O valor total é R$ 24,90.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const paymentForm = document.getElementById('paymentForm');
+    const successMessage = document.getElementById('successMessage');
+
+    paymentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      successMessage.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Novo Usuário</title>
+  <link rel="stylesheet" href="CSS/All.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Remove a rolagem horizontal */
+    }
+
+    /* Estilo da div do vídeo */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 620px;
+      overflow: hidden; /* Garante que o conteúdo não transborde da div */
+    }
+
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Estilo para o formulário de cadastro */
+    .register-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(49, 48, 48, 0.2); /* Transparência */
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      text-align: center;
+      color: white;
+      max-width: 100%; /* Garante que o formulário não ultrapasse a largura da tela */
+    }
+
+    .register-container input {
+      width: 30%;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .register-container button {
+      width: 40%;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 20px 0;
+      border: none;
+      animation: colorChange 10s infinite;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Estilo do link "Voltar ao Login" */
+    .register-container a {
+      display: block;
+      margin-top: 10px;
+      color: #ff6700; /* Cor laranja para o link */
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer; /* Muda o ponteiro ao passar sobre o link */
+    }
+
+    .register-container a:hover {
+      color: #ff007b; /* Cor laranja mais clara quando o link é hover */
+    }
+
+    /* Links de rodapé dentro da div do vídeo */
+    .footer-links {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px; /* Distância entre os links */
+      color: #fff;
+      max-width: 100%; /* Evita que os links transbordem */
+    }
+
+    .footer-links a {
+      color: #ff6700;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ff007b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Div do vídeo com o formulário de cadastro -->
+  <div class="video-container">
+    <video autoplay muted loop class="video-bg">
+      <source src="Background2.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos em HTML5.
+    </video>
+
+    <!-- Formulário de cadastro centralizado -->
+    <div class="register-container">
+      <h2>Criar conta</h2>
+      <form>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="date" id="data-nascimento" placeholder="Data de Nascimento" required>
+
+        <h5>Endereço</h5>
+        <input type="text" id="logradouro" placeholder="Logradouro" required>
+        <input type="text" id="numero" placeholder="Número" required>
+        <input type="text" id="quadra" placeholder="Quadra" required>
+        <input type="text" id="lote" placeholder="Lote" required>
+        <input type="text" id="bairro" placeholder="Bairro" required>
+        <input type="text" id="cep" placeholder="CEP" required>
+        <input type="text" id="cidade" placeholder="Cidade" required>
+        <input type="text" id="estado" placeholder="Estado" required>
+        <button type="button" onclick="window.location.href='login.html'">Criar</button>
+      </form>
+      <a href="login.html">Já tem uma conta? Faça login</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
